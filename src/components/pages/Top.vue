@@ -15,6 +15,7 @@
   justify-content: center;
   /* align-items: center; */
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .top-text {

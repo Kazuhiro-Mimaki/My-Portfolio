@@ -3,6 +3,7 @@
     <Header></Header>
     <Top></Top>
     <About></About>
+    <Skills></Skills>
     <!-- <div id="nav"> -->
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
@@ -13,15 +14,17 @@
 
 <script>
 import 'normalize.css'
-import Header from './components/Header'
-import Top from './components/Top'
-import About from './components/About'
+import Header from './components/pages/Header'
+import Top from './components/pages/Top'
+import About from './components/pages/About'
+import Skills from './components/pages/Skills'
 
 export default {
   components: {
     Header,
     Top,
     About,
+    Skills,
   },
 }
 </script>
