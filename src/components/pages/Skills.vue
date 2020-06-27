@@ -4,11 +4,12 @@
     <pageTitle title="Skills"></pageTitle>
     <div class="items">
       <ul>
-        <li v-for="(subject, index) in subjects" :key="index">
-          <h3>{{ subject.key }}</h3>
-          <p>{{ subject.value }}</p>
+        <li v-for="(language, index) in languages" :key="index">
+          <img v-bind:src="language.url">
+          <h5>{{ language.name }}</h5>
         </li>
       </ul>
+      <!-- <img v-for="(language, index) in languages" :key="index" v-bind:src="language.url"> -->
     </div>
   </div>
 </template>
@@ -22,11 +23,15 @@ export default {
   },
   data() {
     return {
-      subjects: [
-        { key: 'Name', value: 'Kazuhiro Mimaki' },
-        { key: 'Age', value: '22' },
-        { key: 'University', value: 'Kyoto University (Faculty of Economics)' },
-        { key: 'About me', value: 'プログラミングを勉強し始めて半年くらい。\nまだまだできることは少ないですが、プログラミング楽しいです。' },
+      languages: [
+        { url: 'https://cdn.svgporn.com/logos/html-5.svg', name: 'HTML' },
+        { url: 'https://cdn.svgporn.com/logos/css-3.svg', name: 'CSS' },
+        { url: 'https://cdn.svgporn.com/logos/ruby.svg', name: 'Ruby' },
+        { url: 'https://cdn.svgporn.com/logos/rails.svg', name: 'Ruby on Rails' },
+        { url: 'https://cdn.svgporn.com/logos/javascript.svg', name: 'JavaScript' },
+        { url: 'https://cdn.svgporn.com/logos/vue.svg', name: 'Vue.js' },
+        { url: 'https://cdn.svgporn.com/logos/c-plusplus.svg', name: 'C++' },
+        { url: 'https://cdn.svgporn.com/logos/github-icon.svg', name: 'Github' },
       ]
     }
   }
@@ -35,5 +40,28 @@ export default {
 
 <style scoped>
 
+.items {
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  height: 50px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: top;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h5 {
+  text-align: center;
+}
 
 </style>
