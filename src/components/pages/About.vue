@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <!-- <pageTitle title="About"></pageTitle> -->
     <pageTitle title="About"></pageTitle>
     <div class="items">
       <img src="../../assets/portfolio.jpg">
