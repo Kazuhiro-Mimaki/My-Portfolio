@@ -1,7 +1,7 @@
 <template>
   <div class="works">
     <pageTitle title="Works"></pageTitle>
-    <ul class="works">
+    <ul>
       <li>
         <a href="https://geekhubhack.herokuapp.com/">
           <img src="../../assets/geekhub.png">
@@ -39,14 +39,15 @@ export default {
 <style scoped>
 
 .works {
-  margin: 0 auto 200px;
-  width: 80%;
+  margin-bottom: 200px;
 }
 
 ul {
   display: flex;
   justify-content: space-evenly;
   padding-left: 0;
+  width: 60%;
+  margin: 0 auto;
 }
 
 li {
