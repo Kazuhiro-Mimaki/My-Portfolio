@@ -16,7 +16,7 @@ export default {
   border-bottom: solid 2px #555;
   width: 50%;
   margin: 0 auto 50px;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 </style>

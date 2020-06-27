@@ -41,7 +41,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 50%;
-  margin: 0 auto 100px;
+  margin: 0 auto 200px;
 }
 
 .items img {

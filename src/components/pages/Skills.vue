@@ -1,6 +1,5 @@
 <template>
   <div class="skills">
-    <!-- <pageTitle title="About"></pageTitle> -->
     <pageTitle title="Skills"></pageTitle>
     <div class="items">
       <ul>
@@ -9,7 +8,6 @@
           <h5>{{ language.name }}</h5>
         </li>
       </ul>
-      <!-- <img v-for="(language, index) in languages" :key="index" v-bind:src="language.url"> -->
     </div>
   </div>
 </template>
@@ -39,6 +37,10 @@ export default {
 </script>
 
 <style scoped>
+
+.skills {
+  margin-bottom: 200px;
+}
 
 .items {
   width: 80%;
