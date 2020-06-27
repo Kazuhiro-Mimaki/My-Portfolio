@@ -18,6 +18,9 @@
 
 header {
   box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.1);
+  top: 0;
+  position: sticky;
+  background-color: #fff;
   /* position: fixed; */
 }
 
