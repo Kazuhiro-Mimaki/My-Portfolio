@@ -13,8 +13,8 @@
         </a>
       </li>
       <li>
-        <a href="https://geekhubhack.herokuapp.com/">
-          <img src="../../assets/geekhub.png">
+        <a href="#">
+          <img src="../../assets/portfolio.png">
           <div class="content">
             <h3>Portfolio</h3>
             <p class="detail">このポートフォリオサイトです。簡易ですがSPAやアニメーションを導入しました。JavaScript、Vue.jsのいい勉強になりました。</p>
