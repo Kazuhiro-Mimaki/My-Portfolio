@@ -7,7 +7,7 @@
           <img src="../../assets/geekhub.png">
           <div class="content">
             <h3>GEEK HUB</h3>
-            <p class="detail">GEEK HUBは開発物を気軽に投稿できるサービスです。WebAPIの勉強のためにGitHub APIを使いたくて、このアプリを作成しました。</p>
+            <p class="detail">GEEK HUBは開発物を気軽に投稿できるサービスです。WebAPIの勉強のためにGitHub APIを使いたくて、このアプリを作成しました。まだ不十分な部分はこれから実装していきます。</p>
             <p>Ruby on Rails, Bootstrap, GitHub API, Heroku</p>
           </div>
         </a>
