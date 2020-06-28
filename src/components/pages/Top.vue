@@ -1,7 +1,7 @@
 <template>
   <div id="top">
-    <vue-typer :text="['Hello.\nMy name is Kazuhiro Mimaki.\n Welcome to my portfolio site.']" class="top-text" :repeat='0'
-    :preTypeDelay="1000" :typeDelay="120" :preEraseDelay="5000" :eraseDelay="2000"></vue-typer>
+    <vue-typer :text="['Hello.\nMy name is Kazuhiro Mimaki.', 'Welcome to my portfolio site.']" class="top-text" :repeat='0'
+    :preTypeDelay="1000" :typeDelay="100" :preEraseDelay="500" :eraseDelay="500"></vue-typer>
   </div>
 </template>
 
