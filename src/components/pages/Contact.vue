@@ -1,6 +1,7 @@
 <template>
   <div class="contact">
     <pageTitle title="Contact"></pageTitle>
+    <p>Please give me a message!</p>
     <div class="items">
       <ul>
         <li v-for="(icon, index) in icons" :key="index">
@@ -35,6 +36,12 @@ export default {
 .items {
   width: 40%;
   margin: 0 auto 200px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
 

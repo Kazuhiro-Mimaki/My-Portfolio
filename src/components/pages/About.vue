@@ -25,8 +25,9 @@ export default {
       subjects: [
         { key: 'Name', value: 'Kazuhiro Mimaki' },
         { key: 'Age', value: '22' },
-        { key: 'University', value: 'Kyoto University (Faculty of Economics)' },
-        { key: 'About me', value: 'プログラミングを勉強し始めて半年ちょっと。\nまだまだできることは少ないですが、プログラミング楽しいです。' },
+        { key: 'University', value: 'Kyoto University (Faculty of Economics)\n2017.04 - 2021.03' },
+        { key: 'Grade', value: '大学の勉強は死なない程度にやってました。ありがたいことに短修制度のお声がけもいただきましたが、院進のモチベもないので4年で卒業します。' },
+        { key: 'About me', value: 'I\'ve studied programing & engineering for about half a year. I can little things about programming, so I will study more and more. I enjoy programming and I love it!' },
       ]
     }
   }
@@ -59,6 +60,10 @@ export default {
 
 .items h3, .items p {
   margin: 10px;
+}
+
+.items p {
+  white-space: pre-wrap
 }
 
 </style>
