@@ -5,7 +5,6 @@
     <About></About>
     <Skills></Skills>
     <Works></Works>
-    <Contact></Contact>
     <Footer></Footer>
     <!-- <div id="nav"> -->
       <!-- <router-link to="/">Home</router-link> |
@@ -22,7 +21,6 @@ import Top from './components/pages/Top'
 import About from './components/pages/About'
 import Skills from './components/pages/Skills'
 import Works from './components/pages/Works'
-import Contact from './components/pages/Contact'
 import Footer from './components/pages/Footer'
 
 export default {
@@ -32,7 +30,6 @@ export default {
     About,
     Skills,
     Works,
-    Contact,
     Footer,
   },
 }
