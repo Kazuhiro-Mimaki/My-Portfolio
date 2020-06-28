@@ -1,5 +1,5 @@
 <template>
-  <div class="skills">
+  <div id="skills">
     <pageTitle title="Skills"></pageTitle>
     <div class="items">
       <p class="sub-title">インターンの実務経験などはありません。気の向くままに個人開発や勉強をしてきました。</p>
@@ -52,8 +52,10 @@ export default {
 
 <style scoped>
 
-.skills {
-  margin-bottom: 200px;
+#skills {
+  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
+  padding-top: 100px; /* 打ち消し用のパディング */
+  margin-bottom: 100px;
 }
 
 .items {

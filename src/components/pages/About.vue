@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div id="about">
     <pageTitle title="About"></pageTitle>
     <div class="items">
       <img src="../../assets/portfolio.jpg">
@@ -36,12 +36,17 @@ export default {
 
 <style scoped>
 
+#about {
+  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
+  padding-top: 100px; /* 打ち消し用のパディング */
+}
+
 .items {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 50%;
-  margin: 0 auto 200px;
+  margin: 0 auto 100px;
 }
 
 .items img {

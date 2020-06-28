@@ -4,15 +4,32 @@
       <h1 class="title">Kazuhiro's Portfolio</h1>
       <ul>
         <!-- @clickイベントでrouter必要 -->
-        <li><a href="#">Top</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Works</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" @click="clickSmoothScroll('#top')">Top</a></li>
+        <li><a href="#" @click="clickSmoothScroll('#about')">About</a></li>
+        <li><a href="#" @click="clickSmoothScroll('#skills')">Skills</a></li>
+        <li><a href="#" @click="clickSmoothScroll('#works')">Works</a></li>
+        <li><a href="#" @click="clickSmoothScroll('#contact')">Contact</a></li>
       </ul>
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  methods: {
+    clickSmoothScroll (x) {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector(x),
+        600,
+        null,
+        null,
+        'y'
+      )
+    }
+  }
+}
+</script>
 
 <style scoped>
 

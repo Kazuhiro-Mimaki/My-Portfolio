@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div id="contact">
     <pageTitle title="Contact"></pageTitle>
     <p>Please give me a message!</p>
     <div class="items">
@@ -34,6 +34,11 @@ export default {
 </script>
 
 <style scoped>
+
+#contact {
+  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
+  padding-top: 100px; /* 打ち消し用のパディング */
+}
 
 .items {
   width: 40%;

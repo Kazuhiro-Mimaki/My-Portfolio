@@ -1,5 +1,5 @@
 <template>
-  <div class="works">
+  <div id="works">
     <pageTitle title="Works"></pageTitle>
     <ul>
       <li>
@@ -38,8 +38,10 @@ export default {
 
 <style scoped>
 
-.works {
-  margin-bottom: 200px;
+#works {
+  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
+  padding-top: 100px; /* 打ち消し用のパディング */
+  margin-bottom: 100px;
 }
 
 ul {
