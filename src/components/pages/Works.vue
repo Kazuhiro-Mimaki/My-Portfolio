@@ -1,7 +1,7 @@
 <template>
-  <div class="works">
+  <div id="works">
     <pageTitle title="Works"></pageTitle>
-    <ul class="works">
+    <ul>
       <li>
         <a href="https://geekhubhack.herokuapp.com/">
           <img src="../../assets/geekhub.png">
@@ -13,12 +13,12 @@
         </a>
       </li>
       <li>
-        <a href="https://geekhubhack.herokuapp.com/">
-          <img src="../../assets/geekhub.png">
+        <a href="#">
+          <img src="../../assets/portfolio.png">
           <div class="content">
             <h3>Portfolio</h3>
-            <p class="detail">このポートフォリオサイトです。SPAやアニメーションを導入し、レスポンシブも頑張りました。フロントは初心者なのでいい勉強になりました。</p>
-            <p>Vue.js, Netlify</p>
+            <p class="detail">このポートフォリオサイトです。簡易ですがSPAやアニメーションを導入しました。JavaScript、Vue.jsのいい勉強になりました。</p>
+            <p>JavaScript, Vue.js, Netlify</p>
           </div>
         </a>
       </li>
@@ -38,23 +38,36 @@ export default {
 
 <style scoped>
 
-.works {
-  margin: 0 auto 200px;
-  width: 80%;
+#works {
+  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
+  padding-top: 100px; /* 打ち消し用のパディング */
+  margin-bottom: 100px;
 }
 
 ul {
   display: flex;
   justify-content: space-evenly;
   padding-left: 0;
+  width: 60%;
+  margin: 0 auto;
 }
 
 li {
   list-style: none;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0 2px 5px #ccc;
   margin: 0 20px;
+  transform-style: flat;
+  transition: all 250ms ease-out;
+  box-shadow: 0 2px 5px #ccc;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: black;
 }
 
 img {
@@ -68,6 +81,10 @@ img {
 
 .detail {
   text-align: left;
+}
+
+li:hover {
+  box-shadow: 0 10px 15px rgba(31, 31, 31, 0.5);
 }
 
 </style>

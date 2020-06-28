@@ -1,5 +1,5 @@
 <template>
-  <div class="top">
+  <div id="top">
     <vue-typer :text="['Hello.\nMy name is Kazuhiro Mimaki.\n Welcome to my portfolio site.']" class="top-text" :repeat='0'
     :preTypeDelay="1000" :typeDelay="120" :preEraseDelay="5000" :eraseDelay="2000"></vue-typer>
   </div>
@@ -7,15 +7,15 @@
 
 <style scoped>
 
-.top {
-  background-color:#03111a;
+#top {
+  background: linear-gradient(-130deg, #EDFC8A, #96A2FC);
   background-size: cover;
   height: 100vh;
   display: flex;
   justify-content: center;
   /* align-items: center; */
   text-align: center;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .top-text {
