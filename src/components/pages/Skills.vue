@@ -2,7 +2,7 @@
   <div id="skills">
     <pageTitle title="Skills"></pageTitle>
     <div class="items">
-      <p class="sub-title">インターンの実務経験などはありません。気の向くままに個人開発や勉強をしてきました。</p>
+      <p class="sub-title">インターンの実務経験などはありません。気の向くままに個人開発や勉強をしています。</p>
       <ul>
         <li v-for="(language, index) in languages" :key="index" v-on:mouseover="mouseOverAction(index)" v-on:mouseleave="mouseLeaveAction(index)">
           <img v-bind:src="language.url">

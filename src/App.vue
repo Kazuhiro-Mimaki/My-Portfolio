@@ -41,7 +41,7 @@ export default {
 <style>
 
 .vue-typer .custom.char{
-  color: aliceblue;
+  color: rgb(100, 100, 100);
 }
 
 #app {

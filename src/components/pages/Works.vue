@@ -62,6 +62,14 @@ li {
   box-shadow: 0 2px 5px #ccc;
 }
 
+a {
+  text-decoration: none;
+}
+
+p {
+  color: black;
+}
+
 img {
   width: 100%;
   border-bottom: solid 1px #ccc;
