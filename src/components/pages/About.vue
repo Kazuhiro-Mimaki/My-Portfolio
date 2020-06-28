@@ -2,8 +2,17 @@
   <div id="about">
     <pageTitle title="About"></pageTitle>
     <div class="items">
-      <img src="../../assets/portfolio.jpg">
-      <ul>
+      <div class="portfolio-images">
+        <div class="my-img">
+          <img src="../../assets/portfolio.jpg">
+        </div>
+        <ul class="sns-images">
+          <li><a href="https://twitter.com/miitaso1045"><img src="../../assets/twitter.png" class="sns"></a></li>
+          <li><a href="https://github.com/Kazuhiro-Mimaki"><img src="../../assets/github.png" class="sns"></a></li>
+          <li><a href="https://qiita.com/Kazuhiro_Mimaki"><img src="../../assets/qiita.png" class="sns"></a></li>
+        </ul>
+      </div>
+      <ul class="content">
         <li v-for="(subject, index) in subjects" :key="index">
           <h3>{{ subject.key }}</h3>
           <p>{{ subject.value }}</p>
@@ -26,7 +35,7 @@ export default {
         { key: 'Name', value: 'Kazuhiro Mimaki' },
         { key: 'Age', value: '22' },
         { key: 'University', value: 'Kyoto University (Faculty of Economics)\n2017.04 - 2021.03' },
-        { key: 'Grade', value: '大学の勉強は死なない程度にやってました。ありがたいことに短修制度のお声がけもいただきましたが、院進のモチベもないので4年で卒業します。就活は終わっていて、来年からは東京でエンジニアとして働きます。' },
+        { key: 'Grade', value: '大学の勉強は死なない程度にやってました。就活は終わっていて、来年からは東京でエンジニアとして働きます。' },
         { key: 'About me', value: 'I\'ve studied programing & engineering for about half a year. I can little things about programming, so I will study more and more. I enjoy programming and I love it!' },
       ]
     }
@@ -43,31 +52,58 @@ export default {
 
 .items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 50%;
   margin: 0 auto 100px;
 }
 
-.items img {
-  width: 40%;
+.my-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-img img {
+  width: 80%;
   border-radius: 100%;
 }
 
-.items ul {
-  width: 50%;
+.sns-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding-left: 0;
 }
 
-.items li {
+li {
   list-style: none;
+}
+
+.sns {
+  width: 50px;
+  margin: 0 20px;
+  filter: grayscale(100%);
+}
+
+.sns:hover {
+  filter: grayscale(0);
+}
+
+.items .content {
+  width: 80%;
+  padding-left: 0;
+}
+
+.items .content li {
   margin-bottom: 20px;
 }
 
-.items h3, .items p {
+.items .content h3, .items .content p {
   margin: 10px;
 }
 
-.items p {
+.items .content p {
   white-space: pre-wrap
 }
 
