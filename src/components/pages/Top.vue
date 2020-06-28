@@ -8,7 +8,7 @@
 <style scoped>
 
 #top {
-  background-color:#03111a;
+  background: linear-gradient(-130deg, #59CDFF, #F58D00);
   background-size: cover;
   height: 100vh;
   display: flex;
