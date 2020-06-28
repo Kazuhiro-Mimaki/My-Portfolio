@@ -5,7 +5,9 @@
     <div class="items">
       <ul>
         <li v-for="(icon, index) in icons" :key="index">
-          <img v-bind:src="icon.url">
+          <a :href="icon.url">
+            <img v-bind:src="icon.img">
+          </a>
         </li>
       </ul>
     </div>
@@ -22,9 +24,9 @@ export default {
   data() {
     return {
       icons: [
-        { url: 'https://cdn.svgporn.com/logos/twitter.svg', name: 'twitter' },
-        { url: 'https://cdn.svgporn.com/logos/facebook.svg', name: 'facebook' },
-        { url: 'https://cdn.svgporn.com/logos/google-gmail.svg', name: 'gmail' },
+        { img: 'https://cdn.svgporn.com/logos/twitter.svg', name: 'twitter', url: 'https://twitter.com/miitaso1045' },
+        { img: 'https://cdn.svgporn.com/logos/facebook.svg', name: 'facebook', url: 'https://www.facebook.com/mimaki.kazuhiro' },
+        { img: 'https://cdn.svgporn.com/logos/google-gmail.svg', name: 'gmail', url: 'mailto:godblessu0405@gmail.com' },
       ]
     }
   }
@@ -54,6 +56,11 @@ ul {
 
 li {
   list-style: none;
+  filter: grayscale(100%);
+}
+
+li:hover {
+  filter: grayscale(0);
 }
 
 img {

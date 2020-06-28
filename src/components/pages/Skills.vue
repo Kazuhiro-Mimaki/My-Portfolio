@@ -2,6 +2,7 @@
   <div class="skills">
     <pageTitle title="Skills"></pageTitle>
     <div class="items">
+      <p class="sub-title">インターンの実務経験などはありません。気の向くままに個人開発や勉強をしてきました。</p>
       <ul>
         <li v-for="(language, index) in languages" :key="index" v-on:mouseover="mouseOverAction(index)" v-on:mouseleave="mouseLeaveAction(index)">
           <img v-bind:src="language.url">
@@ -58,6 +59,11 @@ export default {
 .items {
   width: 70%;
   margin: 0 auto;
+}
+
+.sub-title {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 img {

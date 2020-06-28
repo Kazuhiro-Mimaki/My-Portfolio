@@ -17,8 +17,8 @@
           <img src="../../assets/geekhub.png">
           <div class="content">
             <h3>Portfolio</h3>
-            <p class="detail">このポートフォリオサイトです。SPAやアニメーションを導入し、レスポンシブも頑張りました。フロントは初心者なのでいい勉強になりました。</p>
-            <p>Vue.js, Netlify</p>
+            <p class="detail">このポートフォリオサイトです。簡易ですがSPAやアニメーションを導入しました。JavaScript、Vue.jsのいい勉強になりました。</p>
+            <p>JavaScript, Vue.js, Netlify</p>
           </div>
         </a>
       </li>
