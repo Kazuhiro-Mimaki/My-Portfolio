@@ -54,8 +54,10 @@ li {
   list-style: none;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0 2px 5px #ccc;
   margin: 0 20px;
+  transform-style: flat;
+  transition: all 250ms ease-out;
+  box-shadow: 0 2px 5px #ccc;
 }
 
 img {
@@ -69,6 +71,10 @@ img {
 
 .detail {
   text-align: left;
+}
+
+li:hover {
+  box-shadow: 0 10px 15px rgba(31, 31, 31, 0.5);
 }
 
 </style>
