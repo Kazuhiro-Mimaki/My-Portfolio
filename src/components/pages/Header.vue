@@ -2,19 +2,35 @@
   <header>
     <div class="header">
       <h1 class="title">Portfolio</h1>
-      <ul>
-        <!-- @clickイベントでrouter必要 -->
-        <li><a href="#" @click="clickSmoothScroll('#top')">Top</a></li>
-        <li><a href="#" @click="clickSmoothScroll('#about')">About</a></li>
-        <li><a href="#" @click="clickSmoothScroll('#skills')">Skills</a></li>
-        <li><a href="#" @click="clickSmoothScroll('#works')">Works</a></li>
+
+      <!-- スマホサイズの場合 -->
+      <ul class="hamburger_btn" @click='activeBtn=!activeBtn'>
+        <li class="line line_01" :class="{'btn_line01':activeBtn}"></li>
+        <li class="line line_02" :class="{'btn_line02':activeBtn}"></li>
+        <li class="line line_03" :class="{'btn_line03':activeBtn}"></li>
       </ul>
+      <!--サイドバー-->
+      <transition name="menu">
+        <!-- <div class="menu" v-if="activeBtn"> -->
+            <ul class="menu" v-if="activeBtn">
+                <li><a href="#" @click="clickSmoothScroll('#top')">Top</a></li>
+                <li><a href="#" @click="clickSmoothScroll('#about')">About</a></li>
+                <li><a href="#" @click="clickSmoothScroll('#skills')">Skills</a></li>
+                <li><a href="#" @click="clickSmoothScroll('#works')">Works</a></li>
+            </ul>
+        <!-- </div> -->
+      </transition>
     </div>
   </header>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      activeBtn: false,
+    }
+  },
   methods: {
     clickSmoothScroll (x) {
       event.preventDefault()
@@ -31,6 +47,90 @@ export default {
 </script>
 
 <style scoped>
+
+
+.hamburger_btn {
+  /* position: fixed; 常に最上部に表示したいので固定 */
+  /* top: 0;
+  right: 0; */
+  height: 37px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.hamburger_btn .line {
+  /* position: absolute; */
+  width: 32px;
+  height: 1px;
+  background: #333333;
+  list-style: none;
+}
+
+.hamburger_btn .line_01 {
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_02 {
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_03 {
+  transition: 0.4s ease;
+}
+
+.btn_line01 {
+  transform: translateY(10px) rotate(-45deg);
+  transition: 0.4s ease;
+}
+.btn_line02 {
+  transition: 0.4s ease;
+  opacity: 0;
+}
+.btn_line03 {
+  transform: translateY(-10px) rotate(45deg);
+  transition: 0.4s ease;
+}
+
+/*サイドバー*/
+.menu-enter-active, .menu-leave-active {
+  transition: opacity 0.4s;
+}
+.menu-enter, .menu-leave-to {
+  opacity: 0;
+}
+.menu-leave, .menu-enter-to{
+  opacity: 1;
+}
+
+.menu li {
+  list-style: none;
+  padding: 1rem;
+}
+.menu {
+  background-color: rgba(197, 197, 197, 0.671);
+  z-index: 30;
+  margin-block-start: 0;
+  padding: 2rem 1rem;
+  position: fixed;
+  width: 15rem;
+  height: 80rem;
+  top: 0;
+  right: 0;
+}
+.menu a {
+  color: rgb(66, 66, 66);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0 2rem;
+}
+.menu ul{
+  margin: 1rem;
+  padding: 0;
+}
+
+
+
 
 header {
   box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.1);
@@ -49,7 +149,7 @@ header {
   width: 90%;
 }
 
-ul {
+/* ul {
   display: flex;
   list-style: none;
 }
@@ -66,6 +166,15 @@ a {
 li:hover {
   cursor: pointer;
   border-bottom: solid 1px #000;
-}
+} */
 
 </style>
+
+<!--
+  <ul>
+    <li><a href="#" @click="clickSmoothScroll('#top')">Top</a></li>
+    <li><a href="#" @click="clickSmoothScroll('#about')">About</a></li>
+    <li><a href="#" @click="clickSmoothScroll('#skills')">Skills</a></li>
+    <li><a href="#" @click="clickSmoothScroll('#works')">Works</a></li>
+  </ul>
+-->
