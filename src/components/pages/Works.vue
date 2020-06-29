@@ -17,7 +17,7 @@
           <img src="../../assets/portfolio.png">
           <div class="content">
             <h3>Portfolio</h3>
-            <p class="detail">このポートフォリオサイトです。色・レイアウト共にシンプルさを意識しました。簡易ですが、JavaScript、Vue.jsのいい勉強になりました。</p>
+            <p class="detail">このポートフォリオサイトです。色・レイアウト共にシンプルさを意識し、レスポンシブ対応まで頑張りました。簡易ですが、JavaScript、Vue.jsのいい勉強になりました。</p>
             <p>JavaScript, Vue.js, Netlify</p>
           </div>
         </a>
