@@ -38,7 +38,7 @@ export default {
 <style>
 
 .vue-typer .custom.char{
-  color: rgb(100, 100, 100);
+  color: rgb(80, 80, 80);
 }
 
 #app {

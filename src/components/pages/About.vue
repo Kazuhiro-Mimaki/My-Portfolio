@@ -56,6 +56,7 @@ export default {
   align-items: center;
   width: 50%;
   margin: 0 auto 100px;
+  color: rgb(50, 50, 50);
 }
 
 .my-img {

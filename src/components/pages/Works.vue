@@ -67,7 +67,7 @@ a {
 }
 
 p {
-  color: black;
+  color: rgb(50, 50, 50);
 }
 
 img {

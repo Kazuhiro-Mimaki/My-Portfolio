@@ -61,6 +61,7 @@ export default {
 .items {
   width: 70%;
   margin: 0 auto;
+  color: rgb(50, 50, 50);
 }
 
 .sub-title {
