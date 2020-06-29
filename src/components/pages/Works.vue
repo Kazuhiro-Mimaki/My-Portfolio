@@ -87,4 +87,24 @@ li:hover {
   box-shadow: 0 10px 15px rgba(31, 31, 31, 0.5);
 }
 
+@media screen and (max-width: 480px) {
+
+  #works {
+    margin-bottom: 100px;
+  }
+
+  ul {
+    display: initial;
+    width: 60%;
+  }
+
+  li {
+    margin-bottom: 50px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
 </style>

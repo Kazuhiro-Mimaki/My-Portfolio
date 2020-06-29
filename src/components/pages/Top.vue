@@ -23,4 +23,15 @@
   margin-top: 300px;
 }
 
+@media screen and (max-width: 480px) {
+
+  #top {
+    margin-bottom: 0;
+  }
+
+  .top-text {
+    font-size: 20px;
+  }
+}
+
 </style>

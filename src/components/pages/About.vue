@@ -36,7 +36,7 @@ export default {
         { key: 'Age', value: '22' },
         { key: 'University', value: 'Kyoto University (Faculty of Economics)\n2017.04 - 2021.03' },
         { key: 'Grade', value: '大学の勉強は死なない程度にやってました。就活は終わっていて、来年からは東京でエンジニアとして働きます。' },
-        { key: 'About me', value: 'I\'ve studied programing & engineering for about half a year. I can little things about programming, so I will study more and more. I enjoy programming and I love it!' },
+        { key: 'About me', value: 'I\'ve studied programming & engineering for about half a year. I can little things about programming, so I will study more and more. I enjoy programming and I love it!' },
       ]
     }
   }
@@ -90,21 +90,44 @@ li {
   filter: grayscale(0);
 }
 
-.items .content {
+.content {
   width: 80%;
   padding-left: 0;
 }
 
-.items .content li {
+.content li {
   margin-bottom: 20px;
 }
 
-.items .content h3, .items .content p {
+.content h3, .content p {
   margin: 10px;
 }
 
-.items .content p {
+.content p {
   white-space: pre-wrap
+}
+
+@media screen and (max-width: 480px) {
+
+  .items {
+    display: initial;
+  }
+
+  .portfolio-images {
+    margin-bottom: 50px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content h3 {
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 12px;
+  }
 }
 
 </style>

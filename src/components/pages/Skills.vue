@@ -103,4 +103,27 @@ li:hover {
 p {
   white-space: pre-wrap
 }
+
+@media screen and (max-width: 480px) {
+  #skills {
+    margin-bottom: 0;
+  }
+
+  li {
+    text-align: center;
+    width: 50%;
+    padding-top: 10px;
+    /* padding: 20px; */
+    filter: grayscale(100%);
+  }
+
+  .detail {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
 </style>
