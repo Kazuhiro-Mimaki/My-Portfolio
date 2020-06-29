@@ -18,7 +18,7 @@ footer {
 
 @media screen and (max-width: 480px) {
   footer {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 </style>

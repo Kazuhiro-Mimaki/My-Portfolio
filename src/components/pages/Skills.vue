@@ -118,11 +118,11 @@ p {
   }
 
   .detail {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   p {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 

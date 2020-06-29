@@ -122,11 +122,11 @@ li {
   }
 
   .content h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .content p {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
