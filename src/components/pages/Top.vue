@@ -14,19 +14,20 @@
 
 <style scoped>
 #top {
-  background: linear-gradient(-130deg, #edfc8a, #96a2fc);
-  background-size: cover;
-  height: 100vh;
   display: flex;
   justify-content: center;
+  height: 100vh;
+  margin-bottom: 100px;
+
   /* align-items: center; */
   text-align: center;
-  margin-bottom: 100px;
+  background: linear-gradient(-130deg, #edfc8a, #96a2fc);
+  background-size: cover;
 }
 
 .top-text {
-  font-size: 40px;
   margin-top: 300px;
+  font-size: 40px;
 }
 
 @media screen and (max-width: 480px) {

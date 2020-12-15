@@ -6,12 +6,12 @@
 
 <style scoped>
 footer {
-  height: 60px;
-  background-color: #03111a;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 60px;
+  color: white;
+  background-color: #03111a;
 }
 
 @media screen and (max-width: 480px) {

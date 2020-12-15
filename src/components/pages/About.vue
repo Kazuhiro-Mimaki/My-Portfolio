@@ -59,14 +59,14 @@ export default {
 
 <style scoped>
 #about {
-  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
   padding-top: 100px; /* 打ち消し用のパディング */
+  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
 }
 
 .items {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
   width: 50%;
   margin: 0 auto 100px;
   color: rgb(50, 50, 50);
@@ -86,8 +86,8 @@ export default {
 .sns-images {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
   padding-left: 0;
+  margin-top: 50px;
 }
 
 li {

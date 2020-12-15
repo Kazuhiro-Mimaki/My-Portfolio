@@ -43,27 +43,27 @@ export default {
 
 <style scoped>
 #works {
-  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
   padding-top: 100px; /* 打ち消し用のパディング */
+  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
   margin-bottom: 200px;
 }
 
 ul {
   display: flex;
   justify-content: space-evenly;
-  padding-left: 0;
   width: 60%;
+  padding-left: 0;
   margin: 0 auto;
 }
 
 li {
-  list-style: none;
-  text-align: center;
-  border-radius: 5px;
   margin: 0 20px;
-  transform-style: flat;
-  transition: all 250ms ease-out;
+  text-align: center;
+  list-style: none;
+  border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
+  transition: all 250ms ease-out;
+  transform-style: flat;
 }
 
 a {

@@ -12,11 +12,11 @@ export default {
 
 <style scoped>
 .title {
-  text-align: center;
-  border-bottom: solid 2px #555;
   width: 50%;
   margin: 0 auto 50px;
   font-size: 40px;
+  text-align: center;
+  border-bottom: solid 2px #555;
 }
 
 @media screen and (max-width: 480px) {

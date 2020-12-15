@@ -89,8 +89,8 @@ export default {
 
 <style scoped>
 #skills {
-  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
   padding-top: 100px; /* 打ち消し用のパディング */
+  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
   margin-bottom: 100px;
 }
 
@@ -101,8 +101,8 @@ export default {
 }
 
 .sub-title {
-  text-align: center;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 img {
@@ -111,23 +111,25 @@ img {
 
 ul {
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: top;
+  justify-content: space-evenly;
   padding-left: 0;
 }
 
 li {
-  list-style: none;
-  text-align: center;
   width: 25%;
   padding-top: 10px;
+  text-align: center;
+  list-style: none;
+
   /* padding: 20px; */
   filter: grayscale(100%);
 }
 
 li:hover {
   cursor: pointer;
+
   /* box-shadow: 0 2px 5px #ccc; */
   filter: grayscale(0);
 }
@@ -147,9 +149,10 @@ p {
   }
 
   li {
-    text-align: center;
     width: 50%;
     padding-top: 10px;
+    text-align: center;
+
     /* padding: 20px; */
     filter: grayscale(100%);
   }
