@@ -1,0 +1,26 @@
+$breakpoints: (
+  min: 320px,
+  xs: 480px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+$colors: (
+  base: (
+    background: #fbfcf6,
+  ),
+  light: (
+    primary: #eb008b,
+    accent: #eaf8ff,
+    base: #fff,
+    text: #2a4364,
+  ),
+  dark: (
+    primary: #eb008b,
+    accent: #eaf8ff,
+    base: #2a4364,
+    text: #fff,
+  ),
+);

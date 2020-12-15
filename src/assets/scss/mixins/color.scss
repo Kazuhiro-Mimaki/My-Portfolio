@@ -1,0 +1,5 @@
+$colors: () !default;
+
+@function color($theme, $key) {
+  @return map-get(map-get($colors, $theme), $key);
+}

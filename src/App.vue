@@ -18,7 +18,7 @@
 <script>
 import 'normalize.css';
 import Header from './components/pages/Header';
-import Top from './components/pages/Top';
+import Top from './components/molecules/Top';
 import About from './components/pages/About';
 import Skills from './components/pages/Skills';
 import Works from './components/pages/Works';

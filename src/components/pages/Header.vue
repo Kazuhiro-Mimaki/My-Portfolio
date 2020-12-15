@@ -48,9 +48,10 @@ export default {
 
 <style scoped>
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1;
+  width: 100%;
   background-color: #e0e0e0;
   box-shadow: 0 6px 6px -3px rgba(0, 0, 0, 0.1);
 
