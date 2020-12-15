@@ -7,7 +7,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "start": "npm run serve",
-    "host": "vue-cli-service build && php -S 0.0.0.0:8080 -t ./dist/"
+    "host": "vue-cli-service build && php -S 0.0.0.0:8080 -t ./dist/",
+    "stylelint": "stylelint --fix src/",
+    "prettier": "prettier --write src/"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",

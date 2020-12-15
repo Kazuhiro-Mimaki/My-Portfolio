@@ -1,14 +1,20 @@
 <template>
   <div id="top">
-    <vue-typer :text="['Hello.\nMy name is Kazuhiro Mimaki.', 'Welcome to my portfolio site.']" class="top-text" :repeat='0'
-    :preTypeDelay="1000" :typeDelay="100" :preEraseDelay="500" :eraseDelay="500"></vue-typer>
+    <vue-typer
+      :text="['Hello.\nMy name is Kazuhiro Mimaki.', 'Welcome to my portfolio site.']"
+      class="top-text"
+      :repeat="0"
+      :preTypeDelay="1000"
+      :typeDelay="100"
+      :preEraseDelay="500"
+      :eraseDelay="500"
+    ></vue-typer>
   </div>
 </template>
 
 <style scoped>
-
 #top {
-  background: linear-gradient(-130deg, #EDFC8A, #96A2FC);
+  background: linear-gradient(-130deg, #edfc8a, #96a2fc);
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -24,7 +30,6 @@
 }
 
 @media screen and (max-width: 480px) {
-
   #top {
     margin-bottom: 0;
   }
@@ -33,5 +38,4 @@
     font-size: 20px;
   }
 }
-
 </style>

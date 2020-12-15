@@ -1,8 +1,6 @@
 <template>
   <footer>
-    <div class="footer">
-      &copy;All right reserved by Kazuhiro Mimmaki
-    </div>
+    <div class="footer">&copy;All right reserved by Kazuhiro Mimmaki</div>
   </footer>
 </template>
 

@@ -4,12 +4,18 @@
     <div class="items">
       <div class="portfolio-images">
         <div class="my-img">
-          <img src="../../assets/portfolio.jpg">
+          <img src="../../assets/portfolio.jpg" />
         </div>
         <ul class="sns-images">
-          <li><a href="https://twitter.com/miitaso1045"><img src="../../assets/twitter.png" class="sns"></a></li>
-          <li><a href="https://github.com/Kazuhiro-Mimaki"><img src="../../assets/github.png" class="sns"></a></li>
-          <li><a href="https://qiita.com/Kazuhiro_Mimaki"><img src="../../assets/qiita.png" class="sns"></a></li>
+          <li>
+            <a href="https://twitter.com/miitaso1045"><img src="../../assets/twitter.png" class="sns" /></a>
+          </li>
+          <li>
+            <a href="https://github.com/Kazuhiro-Mimaki"><img src="../../assets/github.png" class="sns" /></a>
+          </li>
+          <li>
+            <a href="https://qiita.com/Kazuhiro_Mimaki"><img src="../../assets/qiita.png" class="sns" /></a>
+          </li>
         </ul>
       </div>
       <ul class="content">
@@ -23,7 +29,7 @@
 </template>
 
 <script>
-import pageTitle from '../modules/pageTitle'
+import pageTitle from '../modules/pageTitle';
 
 export default {
   components: {
@@ -35,16 +41,23 @@ export default {
         { key: 'Name', value: 'Kazuhiro Mimaki' },
         { key: 'Age', value: '22' },
         { key: 'University', value: 'Kyoto University (Faculty of Economics)\n2017.04 - 2021.03' },
-        { key: 'Grade', value: '大学の勉強は死なない程度にやってました。就活は終わっていて、来年からは東京でエンジニアとして働きます。' },
-        { key: 'About me', value: 'I\'ve studied programming & engineering for about half a year. I can little things about programming, so I will study more and more. I enjoy programming and I love it!' },
-      ]
-    }
-  }
-}
+        {
+          key: 'Grade',
+          value:
+            '大学の勉強は死なない程度にやってました。就活は終わっていて、来年からは東京でエンジニアとして働きます。',
+        },
+        {
+          key: 'About me',
+          value:
+            "I've studied programming & engineering for about half a year. I can little things about programming, so I will study more and more. I enjoy programming and I love it!",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
-
 #about {
   margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
   padding-top: 100px; /* 打ち消し用のパディング */
@@ -100,16 +113,16 @@ li {
   margin-bottom: 20px;
 }
 
-.content h3, .content p {
+.content h3,
+.content p {
   margin: 10px;
 }
 
 .content p {
-  white-space: pre-wrap
+  white-space: pre-wrap;
 }
 
 @media screen and (max-width: 480px) {
-
   .items {
     display: initial;
   }
@@ -130,5 +143,4 @@ li {
     font-size: 15px;
   }
 }
-
 </style>

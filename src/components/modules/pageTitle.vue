@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  props: ["title"],
-}
+  props: ['title'],
+};
 </script>
 
 <style scoped>
@@ -24,5 +24,4 @@ export default {
     font-size: 30px;
   }
 }
-
 </style>

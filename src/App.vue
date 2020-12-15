@@ -1,5 +1,6 @@
 <template>
-  <div> <!-- <div id="app"> -->
+  <div>
+    <!-- <div id="app"> -->
     <Header></Header>
     <Top></Top>
     <About></About>
@@ -7,7 +8,7 @@
     <Works></Works>
     <Footer></Footer>
     <!-- <div id="nav"> -->
-      <!-- <router-link to="/">Home</router-link> |
+    <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
     <!-- </div> -->
     <!-- <router-view/> -->
@@ -15,13 +16,13 @@
 </template>
 
 <script>
-import 'normalize.css'
-import Header from './components/pages/Header'
-import Top from './components/pages/Top'
-import About from './components/pages/About'
-import Skills from './components/pages/Skills'
-import Works from './components/pages/Works'
-import Footer from './components/pages/Footer'
+import 'normalize.css';
+import Header from './components/pages/Header';
+import Top from './components/pages/Top';
+import About from './components/pages/About';
+import Skills from './components/pages/Skills';
+import Works from './components/pages/Works';
+import Footer from './components/pages/Footer';
 
 export default {
   components: {
@@ -32,12 +33,11 @@ export default {
     Works,
     Footer,
   },
-}
+};
 </script>
 
 <style>
-
-.vue-typer .custom.char{
+.vue-typer .custom.char {
   color: rgb(80, 80, 80);
 }
 

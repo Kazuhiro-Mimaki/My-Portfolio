@@ -4,8 +4,13 @@
     <div class="items">
       <p class="sub-title">インターンの実務経験などはありません。気の向くままに個人開発や勉強をしています。</p>
       <ul>
-        <li v-for="(language, index) in languages" :key="index" v-on:mouseover="mouseOverAction(index)" v-on:mouseleave="mouseLeaveAction(index)">
-          <img v-bind:src="language.url">
+        <li
+          v-for="(language, index) in languages"
+          :key="index"
+          v-on:mouseover="mouseOverAction(index)"
+          v-on:mouseleave="mouseLeaveAction(index)"
+        >
+          <img v-bind:src="language.url" />
           <h5>{{ language.name }}</h5>
           <p v-if="isHover && isIndex === index" class="detail">{{ language.detail }}</p>
         </li>
@@ -15,7 +20,7 @@
 </template>
 
 <script>
-import pageTitle from '../modules/pageTitle'
+import pageTitle from '../modules/pageTitle';
 
 export default {
   components: {
@@ -26,16 +31,49 @@ export default {
       isHover: false,
       isIndex: '',
       languages: [
-        { url: 'https://cdn.svgporn.com/logos/html-5.svg', name: 'HTML', detail: 'セマンティクスとツリー構造を意識した基本的なレイアウトが書けます。' },
-        { url: 'https://cdn.svgporn.com/logos/css-3.svg', name: 'CSS', detail: '基本的なデザインが書けます。\nレスポンシブ可。' },
-        { url: 'https://cdn.svgporn.com/logos/ruby.svg', name: 'Ruby', detail: '一番最初に触れた言語です。\nポーカーの役判定アプリやジャンケンゲームを作って遊んだりしてました。' },
-        { url: 'https://cdn.svgporn.com/logos/rails.svg', name: 'Ruby on Rails', detail: '今のところ最も触っているフレームワークです。簡単なWebアプリケーションやLINEBotを作成しました。' },
-        { url: 'https://cdn.svgporn.com/logos/javascript.svg', name: 'JavaScript', detail: '最近勉強し始めた言語です。TypeScriptも勉強しており、何か制作物を作りたいです。' },
-        { url: 'https://cdn.svgporn.com/logos/vue.svg', name: 'Vue.js', detail: 'このポートフォリオサイトを作るために勉強しました。Vue.js便利すぎて驚いてます。' },
-        { url: 'https://cdn.svgporn.com/logos/c-plusplus.svg', name: 'C++', detail: '競技プログラミングの勉強をしていた時に使っていました(最近は全くしてません)。A・B問題は解ける、Cは解けたり解けなかったりというレベルです。高校までの数学の素養だけに任せて解いてきたので、しっかりアルゴリズムの勉強もしていきたいです。' },
-        { url: 'https://cdn.svgporn.com/logos/github-icon.svg', name: 'GitHub', detail: 'master/develop/featureブランチを切って作業、issueを立てる、くらいの基本操作ならできます。' },
-      ]
-    }
+        {
+          url: 'https://cdn.svgporn.com/logos/html-5.svg',
+          name: 'HTML',
+          detail: 'セマンティクスとツリー構造を意識した基本的なレイアウトが書けます。',
+        },
+        {
+          url: 'https://cdn.svgporn.com/logos/css-3.svg',
+          name: 'CSS',
+          detail: '基本的なデザインが書けます。\nレスポンシブ可。',
+        },
+        {
+          url: 'https://cdn.svgporn.com/logos/ruby.svg',
+          name: 'Ruby',
+          detail: '一番最初に触れた言語です。\nポーカーの役判定アプリやジャンケンゲームを作って遊んだりしてました。',
+        },
+        {
+          url: 'https://cdn.svgporn.com/logos/rails.svg',
+          name: 'Ruby on Rails',
+          detail: '今のところ最も触っているフレームワークです。簡単なWebアプリケーションやLINEBotを作成しました。',
+        },
+        {
+          url: 'https://cdn.svgporn.com/logos/javascript.svg',
+          name: 'JavaScript',
+          detail: '最近勉強し始めた言語です。TypeScriptも勉強しており、何か制作物を作りたいです。',
+        },
+        {
+          url: 'https://cdn.svgporn.com/logos/vue.svg',
+          name: 'Vue.js',
+          detail: 'このポートフォリオサイトを作るために勉強しました。Vue.js便利すぎて驚いてます。',
+        },
+        {
+          url: 'https://cdn.svgporn.com/logos/c-plusplus.svg',
+          name: 'C++',
+          detail:
+            '競技プログラミングの勉強をしていた時に使っていました(最近は全くしてません)。A・B問題は解ける、Cは解けたり解けなかったりというレベルです。高校までの数学の素養だけに任せて解いてきたので、しっかりアルゴリズムの勉強もしていきたいです。',
+        },
+        {
+          url: 'https://cdn.svgporn.com/logos/github-icon.svg',
+          name: 'GitHub',
+          detail: 'master/develop/featureブランチを切って作業、issueを立てる、くらいの基本操作ならできます。',
+        },
+      ],
+    };
   },
   methods: {
     mouseOverAction(index) {
@@ -45,13 +83,11 @@ export default {
     mouseLeaveAction() {
       this.isHover = false;
     },
-  }
-}
-
+  },
+};
 </script>
 
 <style scoped>
-
 #skills {
   margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
   padding-top: 100px; /* 打ち消し用のパディング */
@@ -102,7 +138,7 @@ li:hover {
 }
 
 p {
-  white-space: pre-wrap
+  white-space: pre-wrap;
 }
 
 @media screen and (max-width: 480px) {
@@ -126,5 +162,4 @@ p {
     font-size: 15px;
   }
 }
-
 </style>

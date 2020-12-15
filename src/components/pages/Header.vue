@@ -12,19 +12,19 @@
       </ul>
 
       <!-- スマホサイズ -->
-      <ul class="hamburger_btn isMobileHidden" @click='activeBtn=!activeBtn'>
-        <li class="line line_01" :class="{'btn_line01':activeBtn}"></li>
-        <li class="line line_02" :class="{'btn_line02':activeBtn}"></li>
-        <li class="line line_03" :class="{'btn_line03':activeBtn}"></li>
+      <ul class="hamburger_btn isMobileHidden" @click="activeBtn = !activeBtn">
+        <li class="line line_01" :class="{ btn_line01: activeBtn }"></li>
+        <li class="line line_02" :class="{ btn_line02: activeBtn }"></li>
+        <li class="line line_03" :class="{ btn_line03: activeBtn }"></li>
       </ul>
       <!--サイドバー-->
       <transition name="menu">
-          <ul class="menu" v-if="activeBtn">
-              <li><a href="#" @click="clickSmoothScroll('#top')">Top</a></li>
-              <li><a href="#" @click="clickSmoothScroll('#about')">About</a></li>
-              <li><a href="#" @click="clickSmoothScroll('#skills')">Skills</a></li>
-              <li><a href="#" @click="clickSmoothScroll('#works')">Works</a></li>
-          </ul>
+        <ul class="menu" v-if="activeBtn">
+          <li><a href="#" @click="clickSmoothScroll('#top')">Top</a></li>
+          <li><a href="#" @click="clickSmoothScroll('#about')">About</a></li>
+          <li><a href="#" @click="clickSmoothScroll('#skills')">Skills</a></li>
+          <li><a href="#" @click="clickSmoothScroll('#works')">Works</a></li>
+        </ul>
       </transition>
     </div>
   </header>
@@ -35,27 +35,20 @@ export default {
   data() {
     return {
       activeBtn: false,
-    }
+    };
   },
   methods: {
-    clickSmoothScroll (x) {
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector(x),
-        600,
-        null,
-        null,
-        'y'
-      )
-    }
-  }
-}
+    clickSmoothScroll(x) {
+      event.preventDefault();
+      this.$SmoothScroll(document.querySelector(x), 600, null, null, 'y');
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 header {
-  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.1);
   top: 0;
   position: sticky;
   background-color: #e0e0e0;
@@ -63,7 +56,7 @@ header {
   /* position: fixed; */
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,7 +91,6 @@ li {
 }
 
 @media screen and (max-width: 480px) {
-
   .isPCHidden {
     display: none;
   }
@@ -155,13 +147,16 @@ li {
   }
 
   /*サイドバー*/
-  .menu-enter-active, .menu-leave-active {
+  .menu-enter-active,
+  .menu-leave-active {
     transition: opacity 0.4s;
   }
-  .menu-enter, .menu-leave-to {
+  .menu-enter,
+  .menu-leave-to {
     opacity: 0;
   }
-  .menu-leave, .menu-enter-to{
+  .menu-leave,
+  .menu-enter-to {
     opacity: 1;
   }
 
@@ -186,13 +181,11 @@ li {
     font-size: 1.2rem;
     padding: 0 2rem;
   }
-  .menu ul{
+  .menu ul {
     margin: 1rem;
     padding: 0;
   }
-
 }
-
 </style>
 
 <!--
