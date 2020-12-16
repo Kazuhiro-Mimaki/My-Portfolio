@@ -2,17 +2,26 @@
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
-  props: ['title'],
+  components: {
+    SectionTitle: require('@/components/atoms/SectionTitle/Component.vue').default,
+  },
 });
 </script>
 
 <template>
-  <h2 :class="$style.title">
-    {{ title }}
-  </h2>
+  <div :class="$style.section">
+    <SectionTitle />
+
+    <slot />
+  </div>
 </template>
 
 <style lang="scss" module>
+.section {
+  padding-top: 100px; /* 打ち消し用のパディング */
+  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
+}
+
 .title {
   width: 50%;
   margin: 0 auto 50px;
