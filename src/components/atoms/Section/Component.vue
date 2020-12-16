@@ -10,8 +10,6 @@ export default defineComponent({
 
 <template>
   <div :class="$style.section">
-    <SectionTitle />
-
     <slot />
   </div>
 </template>
