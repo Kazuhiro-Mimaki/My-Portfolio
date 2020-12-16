@@ -18,6 +18,7 @@ export default defineComponent({
 .section {
   padding-top: 100px; /* 打ち消し用のパディング */
   margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
+  margin-bottom: 100px;
 }
 
 .title {
@@ -29,8 +30,12 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 480px) {
-  .title {
-    font-size: 30px;
+  .section {
+    margin-bottom: 20px;
+
+    .title {
+      font-size: 30px;
+    }
   }
 }
 </style>

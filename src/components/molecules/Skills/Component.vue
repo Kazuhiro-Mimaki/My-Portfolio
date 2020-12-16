@@ -1,168 +1,54 @@
-<script>
-import pageTitle from '@/components/atoms/SectionTitle/Component';
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api';
 
-export default {
+export default defineComponent({
   components: {
-    pageTitle,
+    Section: require('@/components/atoms/Section/Component.vue').default,
+    SectionTitle: require('@/components/atoms/SectionTitle/Component.vue').default,
   },
-  data() {
+  setup: () => {
+    const languages = ['HTML', 'CSS', 'Ruby on Rails', 'JavaScript', 'Vue.js', 'GitHub', 'Docker'];
+
     return {
-      isHover: false,
-      isIndex: '',
-      languages: [
-        {
-          url: 'https://cdn.svgporn.com/logos/html-5.svg',
-          name: 'HTML',
-          detail: 'セマンティクスとツリー構造を意識した基本的なレイアウトが書けます。',
-        },
-        {
-          url: 'https://cdn.svgporn.com/logos/css-3.svg',
-          name: 'CSS',
-          detail: '基本的なデザインが書けます。\nレスポンシブ可。',
-        },
-        {
-          url: 'https://cdn.svgporn.com/logos/ruby.svg',
-          name: 'Ruby',
-          detail: '一番最初に触れた言語です。\nポーカーの役判定アプリやジャンケンゲームを作って遊んだりしてました。',
-        },
-        {
-          url: 'https://cdn.svgporn.com/logos/rails.svg',
-          name: 'Ruby on Rails',
-          detail: '今のところ最も触っているフレームワークです。簡単なWebアプリケーションやLINEBotを作成しました。',
-        },
-        {
-          url: 'https://cdn.svgporn.com/logos/javascript.svg',
-          name: 'JavaScript',
-          detail: '最近勉強し始めた言語です。TypeScriptも勉強しており、何か制作物を作りたいです。',
-        },
-        {
-          url: 'https://cdn.svgporn.com/logos/vue.svg',
-          name: 'Vue.js',
-          detail: 'このポートフォリオサイトを作るために勉強しました。Vue.js便利すぎて驚いてます。',
-        },
-        {
-          url: 'https://cdn.svgporn.com/logos/c-plusplus.svg',
-          name: 'C++',
-          detail:
-            '競技プログラミングの勉強をしていた時に使っていました(最近は全くしてません)。A・B問題は解ける、Cは解けたり解けなかったりというレベルです。高校までの数学の素養だけに任せて解いてきたので、しっかりアルゴリズムの勉強もしていきたいです。',
-        },
-        {
-          url: 'https://cdn.svgporn.com/logos/github-icon.svg',
-          name: 'GitHub',
-          detail: 'master/develop/featureブランチを切って作業、issueを立てる、くらいの基本操作ならできます。',
-        },
-      ],
+      languages,
     };
   },
-  methods: {
-    mouseOverAction(index) {
-      this.isHover = true;
-      this.isIndex = index;
-    },
-    mouseLeaveAction() {
-      this.isHover = false;
-    },
-  },
-};
+});
 </script>
 
 <template>
-  <div id="skills">
-    <pageTitle title="Skills"></pageTitle>
-    <div class="items">
-      <p class="sub-title">インターンの実務経験などはありません。気の向くままに個人開発や勉強をしています。</p>
-      <ul>
-        <li
-          v-for="(language, index) in languages"
-          :key="index"
-          v-on:mouseover="mouseOverAction(index)"
-          v-on:mouseleave="mouseLeaveAction(index)"
-        >
-          <img v-bind:src="language.url" />
-          <h5>{{ language.name }}</h5>
-          <p v-if="isHover && isIndex === index" class="detail">{{ language.detail }}</p>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <Section id="skills">
+    <SectionTitle title="Skills" />
+    <ul :class="$style.items">
+      <li v-for="(language, index) in languages" :key="index">
+        {{ language }}
+      </li>
+    </ul>
+  </Section>
 </template>
 
-<style scoped>
-#skills {
-  padding-top: 100px; /* 打ち消し用のパディング */
-  margin-top: -50px; /* 固定ナビの高さ分のネガティブマージン */
-  margin-bottom: 100px;
-}
-
+<style lang="scss" module>
 .items {
-  width: 70%;
-  margin: 0 auto;
-  color: rgb(50, 50, 50);
-}
-
-.sub-title {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-img {
-  height: 50px;
-}
-
-ul {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: top;
-  justify-content: space-evenly;
+  width: 60%;
+  max-width: 320px;
+  height: 200px;
   padding-left: 0;
-}
+  margin: 0 auto;
+  color: color(dark, base);
 
-li {
-  width: 25%;
-  padding-top: 10px;
-  text-align: center;
-  list-style: none;
-
-  /* padding: 20px; */
-  filter: grayscale(100%);
-}
-
-li:hover {
-  cursor: pointer;
-
-  /* box-shadow: 0 2px 5px #ccc; */
-  filter: grayscale(0);
-}
-
-.detail {
-  /* text-align: left; */
-  font-size: 14px;
-}
-
-p {
-  white-space: pre-wrap;
+  li {
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  #skills {
-    margin-bottom: 0;
-  }
-
-  li {
-    width: 50%;
-    padding-top: 10px;
-    text-align: center;
-
-    /* padding: 20px; */
-    filter: grayscale(100%);
-  }
-
-  .detail {
-    font-size: 15px;
-  }
-
-  p {
-    font-size: 15px;
+  .items {
+    li {
+      padding-top: 10px;
+    }
   }
 }
 </style>

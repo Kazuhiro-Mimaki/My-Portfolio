@@ -73,7 +73,7 @@ export default defineComponent({
   align-items: center;
   justify-content: space-evenly;
   width: 50%;
-  margin: 0 auto 100px;
+  margin: 0 auto;
   color: rgb(50, 50, 50);
 
   .content {
