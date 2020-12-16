@@ -18,11 +18,11 @@
 <script>
 import 'normalize.css';
 import Header from './components/organisms/Header/Component';
+import Footer from './components/organisms/Footer/Component';
 import Top from './components/molecules/Top/Component';
-import About from './components/pages/About';
-import Skills from './components/pages/Skills';
-import Works from './components/pages/Works';
-import Footer from './components/pages/Footer';
+import About from './components/molecules/About/Component';
+import Skills from './components/molecules/Skills/Component';
+import Works from './components/molecules/Works/Component';
 
 export default {
   components: {

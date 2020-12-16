@@ -1,35 +1,5 @@
-<template>
-  <div id="about">
-    <pageTitle title="About"></pageTitle>
-    <div class="items">
-      <div class="portfolio-images">
-        <div class="my-img">
-          <img src="../../assets/portfolio.jpg" />
-        </div>
-        <ul class="sns-images">
-          <li>
-            <a href="https://twitter.com/miitaso1045"><img src="../../assets/twitter.png" class="sns" /></a>
-          </li>
-          <li>
-            <a href="https://github.com/Kazuhiro-Mimaki"><img src="../../assets/github.png" class="sns" /></a>
-          </li>
-          <li>
-            <a href="https://qiita.com/Kazuhiro_Mimaki"><img src="../../assets/qiita.png" class="sns" /></a>
-          </li>
-        </ul>
-      </div>
-      <ul class="content">
-        <li v-for="(subject, index) in subjects" :key="index">
-          <h3>{{ subject.key }}</h3>
-          <p>{{ subject.value }}</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</template>
-
 <script>
-import pageTitle from '../modules/pageTitle';
+import pageTitle from '@/components/atoms/SectionTitle/Component';
 
 export default {
   components: {
@@ -56,6 +26,36 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div id="about">
+    <pageTitle title="About"></pageTitle>
+    <div class="items">
+      <div class="portfolio-images">
+        <div class="my-img">
+          <img src="@/assets/portfolio.jpg" />
+        </div>
+        <ul class="sns-images">
+          <li>
+            <a href="https://twitter.com/miitaso1045"><img src="@/assets/twitter.png" class="sns" /></a>
+          </li>
+          <li>
+            <a href="https://github.com/Kazuhiro-Mimaki"><img src="@/assets/github.png" class="sns" /></a>
+          </li>
+          <li>
+            <a href="https://qiita.com/Kazuhiro_Mimaki"><img src="@/assets/qiita.png" class="sns" /></a>
+          </li>
+        </ul>
+      </div>
+      <ul class="content">
+        <li v-for="(subject, index) in subjects" :key="index">
+          <h3>{{ subject.key }}</h3>
+          <p>{{ subject.value }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 #about {

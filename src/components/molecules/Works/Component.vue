@@ -1,10 +1,20 @@
+<script>
+import pageTitle from '@/components/atoms/SectionTitle/Component';
+
+export default {
+  components: {
+    pageTitle,
+  },
+};
+</script>
+
 <template>
   <div id="works">
     <pageTitle title="Works"></pageTitle>
     <ul>
       <li>
         <a href="https://geekhubhack.herokuapp.com/">
-          <img src="../../assets/geekhub.png" />
+          <img src="@/assets/geekhub.png" />
           <div class="content">
             <h3>GEEK HUB</h3>
             <p class="detail">
@@ -17,7 +27,7 @@
       </li>
       <li>
         <a href="https://mk-portfolio-site.netlify.app/">
-          <img src="../../assets/portfolio.png" />
+          <img src="@/assets/portfolio.png" />
           <div class="content">
             <h3>Portfolio</h3>
             <p class="detail">
@@ -30,16 +40,6 @@
     </ul>
   </div>
 </template>
-
-<script>
-import pageTitle from '../modules/pageTitle';
-
-export default {
-  components: {
-    pageTitle,
-  },
-};
-</script>
 
 <style scoped>
 #works {

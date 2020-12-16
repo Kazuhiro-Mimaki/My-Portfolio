@@ -1,26 +1,5 @@
-<template>
-  <div id="skills">
-    <pageTitle title="Skills"></pageTitle>
-    <div class="items">
-      <p class="sub-title">インターンの実務経験などはありません。気の向くままに個人開発や勉強をしています。</p>
-      <ul>
-        <li
-          v-for="(language, index) in languages"
-          :key="index"
-          v-on:mouseover="mouseOverAction(index)"
-          v-on:mouseleave="mouseLeaveAction(index)"
-        >
-          <img v-bind:src="language.url" />
-          <h5>{{ language.name }}</h5>
-          <p v-if="isHover && isIndex === index" class="detail">{{ language.detail }}</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</template>
-
 <script>
-import pageTitle from '../modules/pageTitle';
+import pageTitle from '@/components/atoms/SectionTitle/Component';
 
 export default {
   components: {
@@ -86,6 +65,27 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div id="skills">
+    <pageTitle title="Skills"></pageTitle>
+    <div class="items">
+      <p class="sub-title">インターンの実務経験などはありません。気の向くままに個人開発や勉強をしています。</p>
+      <ul>
+        <li
+          v-for="(language, index) in languages"
+          :key="index"
+          v-on:mouseover="mouseOverAction(index)"
+          v-on:mouseleave="mouseLeaveAction(index)"
+        >
+          <img v-bind:src="language.url" />
+          <h5>{{ language.name }}</h5>
+          <p v-if="isHover && isIndex === index" class="detail">{{ language.detail }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 #skills {
