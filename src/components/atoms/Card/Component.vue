@@ -33,6 +33,10 @@ export default defineComponent({
   .content {
     padding: 0 20px 20px;
 
+    h3 {
+      color: color(dark, base);
+    }
+
     .detail {
       text-align: left;
     }
