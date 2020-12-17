@@ -4,14 +4,14 @@
   </footer>
 </template>
 
-<style scoped>
+<style lang="scss" module>
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 60px;
   color: white;
-  background-color: #03111a;
+  background-color: color(dark, primary);
 }
 
 @media screen and (max-width: 480px) {
