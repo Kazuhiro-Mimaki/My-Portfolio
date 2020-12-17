@@ -10,9 +10,10 @@
 <style lang="scss" module>
 .header_nav {
   display: flex;
+  padding-left: 0;
 
   .nav_list {
-    margin-left: 40px;
+    margin: 0 40px;
     list-style: none;
 
     &:hover {
@@ -24,12 +25,6 @@
       color: color(dark, primary);
       text-decoration: none;
     }
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header_nav {
-    display: none;
   }
 }
 </style>
