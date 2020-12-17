@@ -33,7 +33,7 @@
 @media screen and (max-width: 480px) {
   .header_nav {
     .nav_list {
-      margin: 0 10px;
+      margin: 0;
     }
   }
 }

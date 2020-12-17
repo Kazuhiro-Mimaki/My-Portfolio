@@ -28,4 +28,10 @@ header {
   background-color: #e0e0e0;
   box-shadow: 0 6px 6px -3px rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 480px) {
+  header {
+    height: 60px;
+  }
+}
 </style>
