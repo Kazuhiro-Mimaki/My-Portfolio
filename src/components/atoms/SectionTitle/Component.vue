@@ -18,7 +18,7 @@ export default defineComponent({
   margin: 0 auto 50px;
   font-size: 40px;
   text-align: center;
-  border-bottom: solid 2px #555;
+  border-bottom: solid 6px color(dark, base);
 }
 
 @media screen and (max-width: 480px) {

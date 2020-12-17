@@ -13,16 +13,18 @@
   padding-left: 0;
 
   .nav_list {
+    padding: 10px 20px;
     margin: 0 40px;
     list-style: none;
+    border-radius: 8px;
 
     &:hover {
       cursor: pointer;
-      border-bottom: solid 1px #000;
+      background: rgba(255, 255, 255, 0.3);
     }
 
     a {
-      color: color(dark, primary);
+      color: color(dark, base);
       text-decoration: none;
     }
   }
