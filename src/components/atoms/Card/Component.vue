@@ -22,6 +22,7 @@ export default defineComponent({
 <style lang="scss" module>
 .component {
   display: block;
+  max-width: 360px;
   text-decoration: none;
 
   img {

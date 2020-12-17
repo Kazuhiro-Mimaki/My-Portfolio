@@ -72,7 +72,6 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 50%;
   margin: 0 auto;
   color: rgb(50, 50, 50);
 

@@ -38,7 +38,7 @@ export default defineComponent({
         href: 'https://twitter.com/buzzrita/',
         title: 'Buzzrita',
         detail:
-          '"エンジニア"や"プログラミング"といったキーワードに紐づくLGTM数の多い記事を毎日2回呟いてくれるTwitterボットです。データはスクレイピングで取得し, Herokuのtime schedulerを利用してプログラムを定期実行しています。',
+          '"エンジニア"や"プログラミング"といったキーワードに紐づくLGTM数の多いQiitaの記事を毎日2回呟いてくれるTwitterボットです。データはスクレイピングで取得し, Herokuのtime schedulerを利用してプログラムを定期実行しています。',
         languages: 'Python, Twitter API, heroku',
       },
     ];
@@ -70,15 +70,14 @@ export default defineComponent({
 .component {
   .cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 60%;
-    padding-left: 0;
     margin: 0 auto;
 
     .card {
-      margin: 0 20px;
+      width: 100%;
+      margin: 10px;
       text-align: center;
-      list-style: none;
       border-radius: 5px;
       box-shadow: 0 2px 5px #ccc;
       transition: all 250ms ease-out;
@@ -94,9 +93,6 @@ export default defineComponent({
 @media screen and (max-width: 480px) {
   .component {
     .cards {
-      display: initial;
-      width: 60%;
-
       .card {
         margin-bottom: 50px;
       }
